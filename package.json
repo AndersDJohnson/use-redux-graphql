@@ -1,0 +1,31 @@
+{
+  "name": "apollo-redux-query",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/demo/index.tsx",
+  "dependencies": {
+    "@apollo/react-hooks": "3.1.3",
+    "apollo-boost": "0.4.7",
+    "graphql": "14.5.8",
+    "graphql-tag": "2.10.1",
+    "lodash": "4.17.15",
+    "react": "16.8.4",
+    "react-dom": "16.8.4",
+    "react-redux": "7.1.3",
+    "react-scripts": "2.1.3",
+    "redux": "4.0.5"
+  },
+  "devDependencies": {
+    "@types/react": "16.8.8",
+    "@types/react-dom": "16.8.2",
+    "typescript": "3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
+}
