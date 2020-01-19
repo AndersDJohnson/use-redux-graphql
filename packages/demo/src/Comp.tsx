@@ -1,6 +1,6 @@
 import * as React from "react";
 import gql from "graphql-tag";
-import { useReduxQuery } from "../lib";
+import { useReduxQuery } from "../../apollo-redux-query/src";
 
 const COMP_QUERY = gql`
   query CompQuery {
