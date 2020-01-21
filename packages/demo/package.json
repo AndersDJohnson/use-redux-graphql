@@ -21,6 +21,8 @@
 	"devDependencies": {
 		"@types/react": "16.8.8",
 		"@types/react-dom": "16.8.2",
+		"@types/react-redux": "^7.1.6",
+		"apollo": "^2.21.3",
 		"typescript": "3.3.3"
 	},
 	"browserslist": [
@@ -29,10 +31,10 @@
 		"not ie <= 11",
 		"not op_mini all"
 	],
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject"
+	}
 }

@@ -1,0 +1,25 @@
+{
+  "strict": true,
+  "include": [
+    "./src/*"
+  ],
+  "compilerOptions": {
+    "outDir": "dist/",
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "jsx": "preserve",
+    "target": "es5",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "declaration": true
+  }
+}

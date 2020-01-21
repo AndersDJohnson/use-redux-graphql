@@ -1,3 +1,7 @@
+# apollo-redux-query
+
+
+```ts
 import * as React from "react";
 import gql from "graphql-tag";
 import { useReduxQuery } from "apollo-redux-query";
@@ -22,3 +26,4 @@ export const Comp = () => {
 
   return <h1>name: {data && data.redux && data.redux && data.redux.name}</h1>;
 };
+```

@@ -3,20 +3,23 @@
 	"version": "0.0.0",
 	"description": "",
 	"keywords": [],
-	"main": "src/index.tsx",
+	"main": "dist",
+	"types": "dist/index.d.ts",
 	"dependencies": {
-		"@apollo/react-hooks": "3.1.3",
-		"apollo-boost": "0.4.7",
-		"graphql": "14.5.8",
-		"graphql-tag": "2.10.1",
-		"lodash": "4.17.15",
-		"react": "16.8.4",
-		"react-redux": "7.1.3",
-		"redux": "4.0.5"
+		"lodash": "^4"
 	},
+        "peerDependencies": {
+			"@apollo/react-hooks": "*",
+			"react-dom": "*",
+			"react": "*",
+			"react-redux": "*",
+			"redux": "*"
+        },
 	"devDependencies": {
+			"@apollo/react-common": "*",
 		"@types/react": "16.8.8",
-		"typescript": "3.3.3"
+		"typescript": "3.3.3",
+		"graphql": "14.5.8"
 	},
 	"browserslist": [
 		">0.2%",

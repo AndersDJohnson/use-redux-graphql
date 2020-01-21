@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
 import { useQuery, QueryHookOptions } from "@apollo/react-hooks";
-import { QueryResult } from "@apollo/react-common";
 import { ReactReduxContext } from "react-redux";
-import { DocumentNode } from "graphql";
+import { QueryResult } from "@apollo/react-common"; // dev-only for types
+import { DocumentNode } from "graphql"; // dev-only for types
 
 const useReduxQuery = <TData = any, TVariables = Record<string, any>>(
   query: DocumentNode,
