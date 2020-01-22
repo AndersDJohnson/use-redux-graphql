@@ -1,6 +1,6 @@
 # use-redux-graphql
 
-Connect to your Redux state with a React hook that does a client-side GraphQL query
+Connect to your Redux state with a React Hook that does a client-side GraphQL query
 via the lightweight [`graphql-object`](https://www.npmjs.com/package/graphql-object) utility.
 
 ⚛️:sunglasses:⚛️
@@ -18,7 +18,7 @@ Queries will automatically re-execute whenever state changes to get the latest d
 
 ## Usage in Components
 
-Here's how you use the React hook in a component:
+Here's how you use the React Hook in a component:
 
 ```tsx
 import * as React from "react";
