@@ -20,7 +20,7 @@
 	"main": "dist",
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"build": "tsc"
+		"build": "rm -rf dist && tsc"
 	},
 	"dependencies": {
 		"graphql-object": "^1.0.2"
