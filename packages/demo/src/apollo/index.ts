@@ -3,11 +3,9 @@ import gql from "graphql-tag";
 import { makeResolver } from "apollo-redux-query";
 import { store } from "../redux/store";
 // @ts-ignore
-import REDUX_GRAPHQL from './redux.graphql';
+import REDUX_GRAPHQL from './graphql/redux.graphql';
 
-console.log('ADJ REDUX_GRAPHQL', REDUX_GRAPHQL);
-
-const typeDefs = gql`${REDUX_GRAPHQL}`;
+const typeDefs = gql`${REDUX_GRAPHQL.replace('type Query', 'extend type Query')}`;
 
 const resolvers = {
   Query: {

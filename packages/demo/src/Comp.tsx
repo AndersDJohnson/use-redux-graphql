@@ -1,6 +1,7 @@
 import * as React from "react";
 import gql from "graphql-tag";
 import { useReduxQuery } from "apollo-redux-query";
+import { ReduxGQLQuery } from "./__generated__/reduxGQL";
 
 const COMP_QUERY = gql`
   query CompQuery {
@@ -14,11 +15,11 @@ const COMP_QUERY = gql`
 `;
 
 export const Comp = () => {
-  const { data, error } = useReduxQuery(COMP_QUERY);
+  const { data, error } = useReduxQuery<ReduxGQLQuery>(COMP_QUERY);
 
   console.log("render", { data, error });
 
   if (error) return <div>error</div>;
 
-  return <h1>name: {data && data.redux && data.redux && data.redux.name}</h1>;
+  return <h1>name: {data?.redux?.name}</h1>;
 };
