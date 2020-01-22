@@ -23,6 +23,7 @@
 		"@types/react-dom": "16.8.2",
 		"@types/react-redux": "^7.1.6",
 		"apollo": "^2.21.3",
+		"raw-loader": "^4.0.0",
 		"typescript": "3.3.3"
 	},
 	"browserslist": [

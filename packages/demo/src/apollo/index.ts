@@ -2,26 +2,11 @@ import ApolloClient from "apollo-boost";
 import gql from "graphql-tag";
 import { makeResolver } from "apollo-redux-query";
 import { store } from "../redux/store";
+import REDUX_GRAPHQL from './redux.graphql';
 
-const typeDefs = gql`
-  type Place {
-    kind: String
-  }
+console.log('ADJ REDUX_GRAPHQL', REDUX_GRAPHQL);
 
-  type Nested {
-    flag: Boolean
-    place: Place
-  }
-
-  type Redux {
-    name: String
-    nested: Nested
-  }
-
-  extend type Query {
-    redux: Redux
-  }
-`;
+const typeDefs = gql`${REDUX_GRAPHQL}`;
 
 const resolvers = {
   Query: {

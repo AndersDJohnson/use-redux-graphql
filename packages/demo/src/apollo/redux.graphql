@@ -1,0 +1,19 @@
+
+  type Place {
+    kind: String
+  }
+
+  type Nested {
+    flag: Boolean
+    place: Place
+  }
+
+  type Redux {
+    name: String
+    nested: Nested
+  }
+
+  extend type Query {
+    redux: Redux
+  }
+
