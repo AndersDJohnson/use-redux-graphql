@@ -1,5 +1,5 @@
 {
-  "name": "redux-graphql-apollo-demo",
+  "name": "use-redux-graphql-apollo-demo",
   "private": true,
   "version": "0.0.0",
   "description": "",
@@ -10,7 +10,7 @@
     "@babel/core": "7.1.6",
     "@svgr/webpack": "2.4.1",
     "apollo-boost": "0.4.7",
-    "redux-graphql-apollo": "0.0.0",
+    "use-redux-graphql-apollo": "0.0.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
     "babel-jest": "23.6.0",

@@ -1,10 +1,10 @@
-# redux-graphql-apollo
+# use-redux-graphql-apollo
 
 Connect to your Redux state with a React Hook that does a client-side GraphQL query via Apollo.
 
 ⚛️:sunglasses:⚛️
 
-Don't use Apollo? See [`redux-graphql`](https://github.com/AndersDJohnson/redux-graphql/tree/master/packages/redux-graphql#readme).
+Don't use Apollo? See [`use-redux-graphql`](https://github.com/AndersDJohnson/use-redux-graphql/tree/master/packages/use-redux-graphql#readme).
 
 This can help as you migrate an existing application from storing API response data in Redux
 and accessing through selectors toward fetching it from a GraphQL server via React Hooks.
@@ -24,7 +24,7 @@ Here's how you use the React Hook it in a component:
 ```tsx
 import * as React from "react";
 import gql from "graphql-tag";
-import { useReduxGraphQuery } from "redux-graphql-apollo";
+import { useReduxGraphQuery } from "use-redux-graphql-apollo";
 import { ReduxGQLQuery } from "./__generated__/reduxGQL";
 
 const COMP_QUERY = gql`
@@ -53,7 +53,7 @@ export const Comp = () => {
 Here's how you configure the resolver with Apollo client:
 
 ```ts
-import { makeResolver } from "redux-graphql-apollo";
+import { makeResolver } from "use-redux-graphql-apollo";
 
 const typeDefs = gql`
   type Place {

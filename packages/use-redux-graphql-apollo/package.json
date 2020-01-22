@@ -1,5 +1,5 @@
 {
-	"name": "redux-graphql-apollo",
+	"name": "use-redux-graphql-apollo",
 	"version": "0.0.0",
 	"description": "Connect to Redux state with React Hook for client-side GraphQL query via Apollo.",
 	"keywords": [
