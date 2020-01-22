@@ -19,7 +19,7 @@ Queries will automatically re-execute whenever state changes to get the latest d
 
 ## Usage in Components
 
-Here's how you use the React Hook it in a component:
+Here's how you use the React Hook in a component:
 
 ```tsx
 import * as React from "react";
