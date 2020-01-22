@@ -21,5 +21,5 @@ export const Comp = () => {
 
   if (error) return <div>error</div>;
 
-  return <h1>name: {data?.redux?.name}</h1>;
+  return <h1>name: {data && data.redux && data.redux && data.redux.name}</h1>;
 };
