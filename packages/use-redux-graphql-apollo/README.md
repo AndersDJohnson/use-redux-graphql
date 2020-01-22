@@ -12,9 +12,9 @@ and accessing through selectors toward fetching it from a GraphQL server via Rea
 Queries will automatically re-execute whenever state changes to get the latest data.
 
 ## Table of Contents
-* [Usage in Components](#UsageinComponents)
-* [Configure Apollo Client](#ConfigureApolloClient)
-* [TypeScript](#TypeScript)
+* [Usage in Components](#usage-in-components)
+* [Configure Apollo Client](#configure-apollo-client)
+* [TypeScript](#typescript)
 * [`apollo-link-rest`](#apollo-link-rest)
 
 ## Usage in Components
