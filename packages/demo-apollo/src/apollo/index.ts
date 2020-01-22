@@ -1,6 +1,6 @@
 import ApolloClient from "apollo-boost";
 import gql from "graphql-tag";
-import { makeResolver } from "apollo-redux-query";
+import { makeResolver } from "redux-graphql-apollo";
 import { store } from "../redux/store";
 // @ts-ignore
 import REDUX_GRAPHQL from './graphql/redux.graphql';

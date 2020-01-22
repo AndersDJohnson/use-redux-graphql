@@ -1,4 +1,4 @@
-# apollo-redux-query
+# redux-graphql-apollo
 
 Connect to your Redux state with a client-side GraphQL query through Apollo.
 
@@ -16,7 +16,7 @@ Queries will automatically re-execute whenever state changes to get the latest d
 ```ts
 import * as React from "react";
 import gql from "graphql-tag";
-import { useReduxQuery } from "apollo-redux-query";
+import { useReduxQuery } from "redux-graphql-apollo";
 import { ReduxGQLQuery } from "./__generated__/reduxGQL";
 
 const COMP_QUERY = gql`

@@ -1,11 +1,11 @@
 import * as React from "react";
 import gql from "graphql-tag";
-import { useReduxQuery } from "apollo-redux-query";
+import { useReduxQuery } from "redux-graphql";
 import { ReduxGQLQuery } from "./__generated__/reduxGQL";
 
 const COMP_QUERY = gql`
-  query CompQuery {
-    redux @client {
+  {
+    redux {
       name
       nested {
         flag
@@ -14,12 +14,12 @@ const COMP_QUERY = gql`
   }
 `;
 
+console.log('COMP_QUERY', COMP_QUERY);
+
 export const Comp = () => {
-  const { data, error } = useReduxQuery<ReduxGQLQuery>(COMP_QUERY);
+  const { data } = useReduxQuery<ReduxGQLQuery>(COMP_QUERY);
 
-  console.log("render", { data, error });
+  console.log("render", { data });
 
-  if (error) return <div>error</div>;
-
-  return <h1>name: {data && data.redux && data.redux && data.redux.name}</h1>;
+  return <h1>name: {data && data.redux && data.redux.name}</h1>;
 };

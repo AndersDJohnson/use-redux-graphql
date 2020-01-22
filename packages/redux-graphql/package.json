@@ -1,0 +1,26 @@
+{
+	"name": "redux-graphql",
+	"version": "0.0.0",
+	"description": "",
+	"keywords": [],
+	"main": "dist",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc"
+	},
+	"dependencies": {
+		"graphql-object": "^1.0.2",
+		"lodash": "^4"
+	},
+	"peerDependencies": {
+		"react-dom": "*",
+		"react": "*",
+		"react-redux": "*",
+		"redux": "*"
+	},
+	"devDependencies": {
+		"@types/react": "16.8.8",
+		"typescript": "3.3.3",
+		"graphql": "14.5.8"
+	}
+}

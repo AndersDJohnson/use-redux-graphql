@@ -4,10 +4,10 @@ import { ReactReduxContext } from "react-redux";
 import { QueryResult } from "@apollo/react-common"; // dev-only for types
 import { DocumentNode } from "graphql"; // dev-only for types
 
-const useReduxQuery = <TData = any, TVariables = Record<string, any>>(
+const useReduxQuery = <TData = any>(
   query: DocumentNode,
-  options?: QueryHookOptions<TData, TVariables>
-): QueryResult<TData, TVariables> => {
+  options?: QueryHookOptions<TData>
+): QueryResult<TData> => {
   const { store } = useContext(ReactReduxContext);
   const { refetch, ...rest } = useQuery(query, options);
 
