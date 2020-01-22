@@ -5,10 +5,10 @@ Connect to your Redux state with a React Hook that does a client-side GraphQL qu
 ⚛️:sunglasses:⚛️
 
 
-If you don't use Apollo, see [`use-redux-graphql`](https://github.com/AndersDJohnson/use-redux-graphql/tree/master/packages/use-redux-graphql#readme)
+If you don't use Apollo, see [`use-redux-graphql`](https://github.com/AndersDJohnson/use-redux-graphql/tree/master/packages/use-redux-graphql/README.md)
 for full documentation.
 
-Otherwise for Apollo, see [`use-redux-graphql-apollo`](https://github.com/AndersDJohnson/use-redux-graphql/tree/master/packages/use-redux-graphql-apollo#readme).
+Otherwise for Apollo, see [`use-redux-graphql-apollo`](https://github.com/AndersDJohnson/use-redux-graphql/tree/master/packages/use-redux-graphql-apollo/README.md).
 
 Here's a preview:
 
