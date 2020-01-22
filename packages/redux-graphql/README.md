@@ -20,7 +20,7 @@ Queries will automatically re-execute whenever state changes to get the latest d
 
 Here's how you use the React hook it in a component:
 
-```ts
+```tsx
 import * as React from "react";
 import gql from "graphql-tag";
 import { useReduxQuery } from "redux-graphql";
