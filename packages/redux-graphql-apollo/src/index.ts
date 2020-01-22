@@ -1,2 +1,2 @@
 export { makeResolver } from "./makeResolver";
-export { useReduxQuery } from "./useReduxQuery";
+export { useReduxGraphQuery } from "./useReduxGraphQuery";

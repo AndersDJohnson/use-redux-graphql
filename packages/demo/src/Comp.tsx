@@ -1,6 +1,6 @@
 import * as React from "react";
 import gql from "graphql-tag";
-import { useReduxQuery } from "redux-graphql";
+import { useReduxGraphQuery } from "redux-graphql";
 import { ReduxGQLQuery } from "./__generated__/reduxGQL";
 
 const COMP_QUERY = gql`
@@ -15,7 +15,7 @@ const COMP_QUERY = gql`
 `;
 
 export const Comp = () => {
-  const { data } = useReduxQuery<ReduxGQLQuery>(COMP_QUERY);
+  const { data } = useReduxGraphQuery<ReduxGQLQuery>(COMP_QUERY);
 
   console.log("render", { data });
 

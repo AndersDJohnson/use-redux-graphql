@@ -15,7 +15,7 @@ Here's a preview:
 ```tsx
 import * as React from "react";
 import gql from "graphql-tag";
-import { useReduxQuery } from "redux-graphql";
+import { useReduxGraphQuery } from "redux-graphql";
 
 const COMP_QUERY = gql`
   {
@@ -29,7 +29,7 @@ const COMP_QUERY = gql`
 `;
 
 export const Comp = () => {
-  const { data } = useReduxQuery(COMP_QUERY);
+  const { data } = useReduxGraphQuery(COMP_QUERY);
 
   return <h1>name: {data?.redux?.name}</h1>;
 };

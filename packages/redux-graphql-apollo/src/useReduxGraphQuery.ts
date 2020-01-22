@@ -4,7 +4,7 @@ import { ReactReduxContext } from "react-redux";
 import { QueryResult } from "@apollo/react-common"; // dev-only for types
 import { DocumentNode } from "graphql"; // dev-only for types
 
-const useReduxQuery = <TData = any>(
+const useReduxGraphQuery = <TData = any>(
   query: DocumentNode,
   options?: QueryHookOptions<TData>
 ): QueryResult<TData> => {
@@ -19,4 +19,4 @@ const useReduxQuery = <TData = any>(
   };
 };
 
-export { useReduxQuery };
+export { useReduxGraphQuery };

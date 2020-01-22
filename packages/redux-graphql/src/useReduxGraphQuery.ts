@@ -3,7 +3,7 @@ import { ReactReduxContext } from "react-redux";
 import graphql from "graphql-object";
 import { DocumentNode } from "graphql"; // dev-only for types
 
-const useReduxQuery = <TData = any>(
+const useReduxGraphQuery = <TData = any>(
   query: DocumentNode
 ): { data?: TData } => {
   const { store } = useContext(ReactReduxContext);
@@ -22,4 +22,4 @@ const useReduxQuery = <TData = any>(
   };
 };
 
-export { useReduxQuery };
+export { useReduxGraphQuery };
