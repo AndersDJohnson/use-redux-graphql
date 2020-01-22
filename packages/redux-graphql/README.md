@@ -27,10 +27,12 @@ import { useReduxQuery } from "redux-graphql";
 import { ReduxGQLQuery } from "./__generated__/reduxGQL";
 
 const COMP_QUERY = gql`
-  redux {
-    name
-    nested {
-      flag
+  {
+    redux {
+      name
+      nested {
+        flag
+      }
     }
   }
 `;
