@@ -2,6 +2,7 @@ import ApolloClient from "apollo-boost";
 import gql from "graphql-tag";
 import { makeResolver } from "apollo-redux-query";
 import { store } from "../redux/store";
+// @ts-ignore
 import REDUX_GRAPHQL from './redux.graphql';
 
 console.log('ADJ REDUX_GRAPHQL', REDUX_GRAPHQL);
