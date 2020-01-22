@@ -1,8 +1,25 @@
 {
 	"name": "redux-graphql-apollo",
 	"version": "0.0.0",
-	"description": "",
-	"keywords": [],
+	"description": "Connect to Redux state with React Hook for client-side GraphQL query via Apollo.",
+	"keywords": [
+		"redux",
+		"redux-selectors",
+		"reselect",
+		"useSelector",
+		"redux-store",
+		"redux-store-subscribe",
+		"graphql",
+		"graphql-schema",
+		"graphql-client",
+		"graphql-object",
+		"apollo",
+		"apollo-client",
+		"apollo-boost",
+		"react",
+		"react-hooks",
+		"typescript"
+	],
 	"main": "dist",
 	"types": "dist/index.d.ts",
 	"scripts": {

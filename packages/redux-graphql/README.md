@@ -1,10 +1,11 @@
-# redux-graphql-apollo
+# redux-graphql
 
-Connect to your Redux state with a React Hook that does a client-side GraphQL query via Apollo.
+Connect to your Redux state with a React hook that does a client-side GraphQL query
+via the lightweight [`graphql-object`](https://www.npmjs.com/package/graphql-object) utility.
 
 ⚛️:sunglasses:⚛️
 
-Don't use Apollo? See [`redux-graphql`](https://github.com/redux-graphql/blob/master/redux-graphql/).
+Use Apollo? See [`redux-graphql-apollo`](https://github.com/redux-graphql/blob/master/redux-graphql-apollo/).
 
 This can help as you migrate an existing application from storing API response data in Redux
 and accessing through selectors toward fetching it from a GraphQL server via React Hooks.
@@ -13,13 +14,11 @@ Queries will automatically re-execute whenever state changes to get the latest d
 
 ## Table of Contents
 * [Usage in Components](#UsageinComponents)
-* [Configure Apollo Client](#ConfigureApolloClient)
 * [TypeScript](#TypeScript)
-* [`apollo-link-rest`](#apollo-link-rest)
 
 ## Usage in Components
 
-Here's how you use the React Hook it in a component:
+Here's how you use the React hook it in a component:
 
 ```ts
 import * as React from "react";
@@ -43,46 +42,6 @@ export const Comp = () => {
 
   return <h1>name: {data?.redux?.name}</h1>;
 };
-```
-
-## Configure Apollo Client
-
-Here's how you configure the resolver with Apollo client:
-
-```ts
-import { makeResolver } from "redux-graphql-apollo";
-
-const typeDefs = gql`
-  type Place {
-    kind: String
-  }
-  
-  type Nested {
-    flag: Boolean
-    place: Place
-  }
-  
-  type Redux {
-    name: String
-    nested: Nested
-  }
-  
-  type Query {
-    redux: Redux
-  }
-`;
-
-const resolvers = {
-  Query: {
-    redux: makeResolver({ store })
-  }
-};
-
-export const client = new ApolloClient({
-  resolvers,
-  typeDefs,
-  // ...
-});
 ```
 
 If you are also using a remote GraphQL server and you want your client schema to extend,
@@ -154,11 +113,3 @@ npx graphql-schema-typescript generate-ts src/graphql --typePrefix ReduxGQL --ou
 ```
 
 You can add that last command to a `build:types:graphql` script in your `package.json`.
-
-## `apollo-link-rest`
-
-This can pair nicely with [`apollo-link-rest`](https://www.apollographql.com/docs/link/links/rest/),
-which lets you call your REST APIs client-side from within your GraphQL queries - or perhaps as a first step
-toward it. Unfortunately, `apollo-link-rest` can't easily support data that is not a pure transform of an API response,
-e.g., data in Redux state that is derivative of an API response, but is transformed with inputs
-from other pieces of state, or represents the merged state of multiple API calls.
