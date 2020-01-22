@@ -14,8 +14,6 @@ const COMP_QUERY = gql`
   }
 `;
 
-console.log('COMP_QUERY', COMP_QUERY);
-
 export const Comp = () => {
   const { data } = useReduxQuery<ReduxGQLQuery>(COMP_QUERY);
 

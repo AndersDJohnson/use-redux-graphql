@@ -5,7 +5,7 @@ via the lightweight [`graphql-object`](https://www.npmjs.com/package/graphql-obj
 
 ⚛️:sunglasses:⚛️
 
-Use Apollo? See [`redux-graphql-apollo`](https://github.com/redux-graphql/blob/master/redux-graphql-apollo/).
+Use Apollo? See [`redux-graphql-apollo`](https://github.com/AndersDJohnson/redux-graphql/tree/master/packages/redux-graphql-apollo#readme).
 
 This can help as you migrate an existing application from storing API response data in Redux
 and accessing through selectors toward fetching it from a GraphQL server via React Hooks.
@@ -23,16 +23,14 @@ Here's how you use the React hook it in a component:
 ```ts
 import * as React from "react";
 import gql from "graphql-tag";
-import { useReduxQuery } from "redux-graphql-apollo";
+import { useReduxQuery } from "redux-graphql";
 import { ReduxGQLQuery } from "./__generated__/reduxGQL";
 
 const COMP_QUERY = gql`
-  query CompQuery {
-    redux @client {
-      name
-      nested {
-        flag
-      }
+  redux {
+    name
+    nested {
+      flag
     }
   }
 `;
@@ -44,13 +42,10 @@ export const Comp = () => {
 };
 ```
 
-If you are also using a remote GraphQL server and you want your client schema to extend,
-you should use `extend type Query` instead of `type Query`.
-
 ## TypeScript
 
-If you want to generate TypeScript types from your Redux GraphQL schema,
-you can move your schema to an external file, e.g., `src/graphql/redux.graphql`:
+If you want to generate TypeScript types from a Redux GraphQL schema you maintain,
+you can write a schema in an external file, e.g., `src/graphql/redux.graphql`:
 
 ```graphql
 type Place {
@@ -70,34 +65,6 @@ type Redux {
 type Query {
   redux: Redux
 }
-```
-
-Then you can configure webpack `raw-loader` to load in the schema:
-
-```ts
-import REDUX_GRAPHQL from './graphql/redux.graphql';
-
-const typeDefs = gql`${REDUX_GRAPHQL}`;
-
-const client = new ApolloClient({
-  typeDefs,
-  // ...
-});
-```
-
-And again, if you want to extend a remote GraphQL schema, we'll have to
-replace `type Query` with `extend type Query`, but here we want to keepA
-the external schema file pure for the TypeScript tooling, so we'll replace at runtime:
-
-```ts
-import REDUX_GRAPHQL from './graphql/redux.graphql';
-
-const typeDefs = gql`${REDUX_GRAPHQL.replace('type Query', 'extend type Query')}`;
-
-const client = new ApolloClient({
-  typeDefs,
-  // ...
-});
 ```
 
 And here's how you can build the types:
