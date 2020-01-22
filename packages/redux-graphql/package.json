@@ -23,8 +23,7 @@
 		"build": "tsc"
 	},
 	"dependencies": {
-		"graphql-object": "^1.0.2",
-		"lodash": "^4"
+		"graphql-object": "^1.0.2"
 	},
 	"peerDependencies": {
 		"react-dom": "*",
