@@ -18,13 +18,13 @@ Queries will automatically re-execute whenever state changes to get the latest d
 
 ## Usage in Components
 
-Here's how you use the React hook it in a component:
+Here's how you use the React hook in a component:
 
 ```tsx
 import * as React from "react";
 import gql from "graphql-tag";
 import { useReduxGraphQuery } from "use-redux-graphql";
-import { ReduxGQLQuery } from "./__generated__/reduxGQL";
+import { ReduxGQLQuery } from "./__generated__/reduxGQL"; // types
 
 const COMP_QUERY = gql`
   {
