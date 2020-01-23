@@ -1,6 +1,6 @@
 # use-redux-graphql
 
-Connect to your Redux state with a React Hook that does a client-side GraphQL query.
+> Connect to your Redux state with a React Hook that does a client-side GraphQL query.
 
 ⚛️:sunglasses:⚛️
 
