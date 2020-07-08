@@ -130,7 +130,7 @@ const client = new ApolloClient({
 ```
 
 And again, if you want to extend a remote GraphQL schema, we'll have to
-replace `type Query` with `extend type Query`, but here we want to keepA
+replace `type Query` with `extend type Query`, but here we want to keep
 the external schema file pure for the TypeScript tooling, so we'll replace at runtime:
 
 ```ts
