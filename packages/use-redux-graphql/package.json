@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"description": "Connect to Redux state with React Hook for client-side GraphQL query via lightweight graphql-object",
 	"repository": "AndersDJohnson/use-redux-graphql",
+	"funding": "https://github.com/sponsors/AndersDJohnson",
 	"homepage": "https://github.com/AndersDJohnson/use-redux-graphql/tree/master/packages/use-redux-graphql#readme",
 	"keywords": [
 		"redux",
